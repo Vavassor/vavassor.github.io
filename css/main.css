@@ -1,0 +1,37 @@
+a {
+  color: #00abc6;
+}
+
+a:hover {
+  color: #58ecef;
+}
+
+h1 {
+  margin: 0.65em 0;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h2 {
+  margin: 0.87em 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.content {
+  grid-area: main;
+  background-color: #ffffff;
+  padding: 2em;
+}
+
+.whole-page {
+  display: grid;
+  grid-template-columns: 1fr 960px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+      ". header ."
+      ". main ."
+      ". footer .";
+  height: 100vh;
+  background-color: #12c8cc;
+}
