@@ -6,6 +6,23 @@ a:hover {
   color: #58ecef;
 }
 
+body {
+  display: grid;
+  grid-gap: 2em 0;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto;
+  background-color: #12c8cc;
+}
+
+header {
+  background-color: #ffffff;
+  grid-area: header;
+}
+
 h1 {
   margin: 0.65em 0;
   font-size: 2em;
@@ -18,20 +35,69 @@ h2 {
   font-weight: bold;
 }
 
+.nav-main {
+  display: flex;
+}
+
 .content {
   grid-area: main;
   background-color: #ffffff;
-  padding: 2em;
+  padding: 1em 2em 2em 2em;
 }
 
-.whole-page {
-  display: grid;
-  grid-template-columns: 1fr 960px 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-      ". header ."
-      ". main ."
-      ". footer .";
-  height: 100vh;
+.nav-link {
+  color: #000000;
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+}
+
+.nav-link:hover {
   background-color: #12c8cc;
+  color: #ffffff;
+}
+
+.portfolio-area {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.portfolio-caption {
+  background-color: #4aaaa5;
+  bottom: 1em;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: serif;
+  font-size: 1.25em;
+  padding: 1em;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.portfolio-image {
+  width: 100%;
+}
+
+.portfolio-item {
+  position: relative;
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    grid-template-columns: 1fr 540px 1fr;
+    grid-template-areas:
+        "header header header"
+        ". main ."
+        ". footer .";
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    grid-template-columns: 1fr 768px 1fr;
+  }
 }
