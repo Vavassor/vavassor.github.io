@@ -8,6 +8,7 @@ a:hover {
 
 body {
   display: grid;
+  font-family: "Noto Serif", serif;
   grid-gap: 2em 0;
   grid-template-columns: 1fr;
   grid-template-areas:
