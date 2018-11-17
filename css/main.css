@@ -36,6 +36,10 @@ h2 {
   font-weight: bold;
 }
 
+p {
+  font-family: "Muli", sans-serif;
+}
+
 .nav-main {
   display: flex;
 }
