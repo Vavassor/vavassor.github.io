@@ -114,7 +114,7 @@ p {
   color: #ffffff;
 }
 
-.nav-link:hover, .nav-link:focus {
+.nav-link:focus, .nav-link:hover {
   outline: .1em solid #000000;
   color: #000000;
   text-decoration: underline;
@@ -223,7 +223,4 @@ p {
   .portfolio-area {
     grid-template-columns: 1fr 1fr 1fr;
   }
-}
-
-@media screen and (min-width: 1200px) {
 }
