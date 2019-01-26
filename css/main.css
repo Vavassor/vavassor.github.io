@@ -7,21 +7,16 @@ a:hover {
 }
 
 body {
+  background-color: #12c8cc;
   display: grid;
   font-family: "Noto Serif", serif;
-  grid-gap: 2em 0;
-  grid-template-columns: 1fr;
   grid-template-areas:
+    "nav"
     "header"
-    "main"
-    "footer";
-  grid-template-rows: auto;
-  background-color: #12c8cc;
-}
-
-header {
-  background-color: #ffffff;
-  grid-area: header;
+    "main";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr;
+  min-height: 100vh;
 }
 
 h1 {
@@ -36,13 +31,31 @@ h2 {
   margin: 0.87em 0;
 }
 
+html {
+  min-height: 100%;
+}
+
 p {
   font-family: "Muli", sans-serif;
+  margin-bottom: 1em;
+}
+
+.about-area {
+  display: grid;
+  grid-template-areas:
+      "intro"
+      "contact";
+  grid-template-columns: 1fr;
+}
+
+.art-piece {
+  width: 100%;
 }
 
 .contact-area {
   background-color: #dddddd;
-  padding: 1em;
+  grid-area: contact;
+  padding: 2em;
 }
 
 .contact-icon {
@@ -67,11 +80,30 @@ p {
 .content {
   grid-area: main;
   background-color: #ffffff;
-  padding: 2em;
+}
+
+.backdrop-left {
+  grid-area: sideleft;
 }
 
 .introduction {
-  margin-bottom: 2em;
+  grid-area: intro;
+  padding: 2em;
+}
+
+.main-header {
+  align-items: center;
+  background-color: #12c8cc;
+  display: flex;
+  flex-direction: column;
+  grid-area: header;
+  min-height: 2em;
+}
+
+.main-title {
+  color: #ffffff;
+  font-family: "Noto Serif", serif;
+  font-weight: bold;
 }
 
 .nav-link {
@@ -93,7 +125,9 @@ p {
 }
 
 .nav-main {
+  background-color: #ffffff;
   display: flex;
+  grid-area: nav;
 }
 
 .portfolio-area {
@@ -125,13 +159,29 @@ p {
   position: relative;
 }
 
+.portrait {
+  border-radius: 50%;
+  border: .25em solid #ffffff;
+  width: 10em;
+}
+
+.section-title {
+  margin-top: 0;
+}
+
+.tagline {
+  color: #eeeeee;
+  font-size: 1.25em;
+  margin-top: 1em;
+}
+
 @media screen and (min-width: 576px) {
   body {
-    grid-template-columns: 1fr 540px 1fr;
     grid-template-areas:
+        "nav nav nav"
         "header header header"
-        ". main ."
-        ". footer .";
+        ". main .";
+    grid-template-columns: 1fr 540px 1fr;
   }
 
   .portfolio-area {
@@ -142,6 +192,11 @@ p {
 @media screen and (min-width: 768px) {
   body {
     grid-template-columns: 1fr 768px 1fr;
+  }
+
+  .about-area {
+    grid-template-areas: "intro contact";
+    grid-template-columns: 3fr 2fr;
   }
 }
 
