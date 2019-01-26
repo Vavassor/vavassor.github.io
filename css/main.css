@@ -144,6 +144,7 @@ p {
   margin: 0;
   position: absolute;
   text-align: center;
+  transition: .2s;
   width: 100%;
 }
 
@@ -159,6 +160,7 @@ p {
 
 .portfolio-image {
   display: block;
+  transition: .2s;
   width: 100%;
 }
 
