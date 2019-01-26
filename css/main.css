@@ -2,7 +2,7 @@ a {
   color: #00abc6;
 }
 
-a:hover {
+a:focus, a:hover {
   color: #58ecef;
 }
 
@@ -82,10 +82,6 @@ p {
   background-color: #ffffff;
 }
 
-.backdrop-left {
-  grid-area: sideleft;
-}
-
 .introduction {
   grid-area: intro;
   padding: 2em;
@@ -134,7 +130,7 @@ p {
   display: grid;
   grid-gap: 2em;
   grid-template-columns: 1fr;
-  width: 100%;
+  padding: 2em;
 }
 
 .portfolio-caption {
@@ -151,7 +147,18 @@ p {
   width: 100%;
 }
 
+.portfolio-deployment:focus .portfolio-caption,
+.portfolio-deployment:hover .portfolio-caption {
+  background-color: #e03c96;
+}
+
+.portfolio-deployment:focus .portfolio-image,
+.portfolio-deployment:hover .portfolio-image {
+  opacity: 0.8;
+}
+
 .portfolio-image {
+  display: block;
   width: 100%;
 }
 
@@ -163,6 +170,12 @@ p {
   border-radius: 50%;
   border: .25em solid #ffffff;
   width: 10em;
+}
+
+.repo-link {
+  border-bottom: .1em solid #333;
+  padding: 1em 2em;
+  text-align: center;
 }
 
 .section-title {
