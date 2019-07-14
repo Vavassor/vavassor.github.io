@@ -196,7 +196,7 @@ p {
         "nav nav nav"
         "header header header"
         ". main .";
-    grid-template-columns: 1fr 540px 1fr;
+    grid-template-columns: 2rem 1fr 2rem;
   }
 
   .portfolio-area {
@@ -206,7 +206,7 @@ p {
 
 @media screen and (min-width: 768px) {
   body {
-    grid-template-columns: 1fr 768px 1fr;
+    grid-template-columns: 2rem 1fr 2rem;
   }
 
   .about-area {
@@ -217,7 +217,7 @@ p {
 
 @media screen and (min-width: 992px) {
   body {
-    grid-template-columns: 1fr 992px 1fr;
+    grid-template-columns: 2rem 1fr 2rem;
   }
 
   .portfolio-area {
