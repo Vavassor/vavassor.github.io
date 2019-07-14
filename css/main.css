@@ -133,26 +133,6 @@ p {
   padding: 2em;
 }
 
-.portfolio-caption {
-  background-color: #4aaaa5;
-  bottom: 1em;
-  box-sizing: border-box;
-  color: #ffffff;
-  font-family: serif;
-  font-size: 1.25em;
-  padding: 1em;
-  margin: 0;
-  position: absolute;
-  text-align: center;
-  transition: background-color .2s;
-  width: 100%;
-}
-
-.portfolio-deployment:focus .portfolio-caption,
-.portfolio-deployment:hover .portfolio-caption {
-  background-color: #e03c96;
-}
-
 .portfolio-deployment:focus .portfolio-image,
 .portfolio-deployment:hover .portfolio-image {
   opacity: 0.8;
@@ -164,20 +144,14 @@ p {
   width: 100%;
 }
 
-.portfolio-item {
-  position: relative;
+.portfolio-info {
+  text-align: center;
 }
 
 .portrait {
   border-radius: 50%;
   border: .25em solid #ffffff;
   width: 10em;
-}
-
-.repo-link {
-  border-bottom: .1em solid #333;
-  padding: 1em 2em;
-  text-align: center;
 }
 
 .section-title {
